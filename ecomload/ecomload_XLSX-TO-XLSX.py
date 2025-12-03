@@ -6,6 +6,7 @@ from openpyxl import Workbook
 
 # ---------- CONFIGURACIÓN ----------
 ruta_xls = "ecomload/colabora.xlsx"
+# ruta_xls = "ecomload/colabora.xls"
 ruta_json = "ecomload/id_mapping.json"
 salida_csv = "ecomload/output_ecomload.csv"
 salida_excel = "ecomload/output_ecomload.xlsx"

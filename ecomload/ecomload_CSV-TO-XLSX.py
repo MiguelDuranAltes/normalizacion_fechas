@@ -7,8 +7,8 @@ from openpyxl import Workbook
 # ---------- CONFIGURACIÓN ----------
 ruta_csv = "ecomload/colabora.csv"          
 ruta_json = "ecomload/id_mapping.json"      
-ruta_salida = "ecomload/ecomload_output.csv"
-ruta_excel = "ecomload/ecomload_output.xlsx"
+ruta_salida = "ecomload/output_ecomload.csv"
+ruta_excel = "ecomload/output_ecomload.xlsx"
 
 formato_fecha = "%d/%m/%Y %H:%M"
 # -----------------------------------
