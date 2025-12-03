@@ -2,11 +2,13 @@ import pandas as pd
 import json
 from datetime import datetime, timedelta
 from calendar import monthrange
+from openpyxl import Workbook
 
 # ---------- CONFIGURACIÓN ----------
-ruta_csv = "ecomload/colabora.csv"          # CSV de eventos
-ruta_json = "ecomload/id_mapping.json"      # JSON con baseId / colaboraId / ecomloadId
+ruta_csv = "ecomload/colabora.csv"          
+ruta_json = "ecomload/id_mapping.json"      
 ruta_salida = "ecomload/ecomload_output.csv"
+ruta_excel = "ecomload/ecomload_output.xlsx"
 
 formato_fecha = "%d/%m/%Y %H:%M"
 # -----------------------------------
@@ -57,22 +59,34 @@ for idx, row in df.iterrows():
         print(f"Fila {idx}: ⚠️ no encontré mapeo en el JSON para colaboraId = '{colab}', se omite.")
         continue
 
+    # Intentar primero Close Start Date, si no, Production Start Date
     close_start_raw = row.get("Close Start Date")
+    prod_start_raw = row.get("Production Start Date")
 
-    if not isinstance(close_start_raw, str) or not close_start_raw.strip():
-        print(f"Fila {idx}: ⚠️ sin Close Start Date para '{colab}', se omite.")
+    fecha_base_raw = None
+    origen_fecha = None
+
+    if isinstance(close_start_raw, str) and close_start_raw.strip():
+        fecha_base_raw = close_start_raw.strip()
+        origen_fecha = "Close Start Date"
+    elif isinstance(prod_start_raw, str) and prod_start_raw.strip():
+        fecha_base_raw = prod_start_raw.strip()
+        origen_fecha = "Production Start Date"
+    else:
+        print(f"Fila {idx}: sin Close Start Date ni Production Start Date para '{colab}', se omite.")
         continue
-
-    close_start_raw = close_start_raw.strip()
 
     try:
-        close_dt = datetime.strptime(close_start_raw, formato_fecha)
+        fecha_base_dt = datetime.strptime(fecha_base_raw, formato_fecha)
     except ValueError:
-        print(f"Fila {idx}: ⚠️ formato de fecha no válido '{close_start_raw}' para '{colab}', se omite.")
+        print(f"Fila {idx}: ⚠️ formato de fecha no válido '{fecha_base_raw}' en {origen_fecha} para '{colab}', se omite.")
         continue
 
-    # 👉 SIEMPRE: Inicio = Close Start Date - 58 min
-    inicio_dt = close_dt - timedelta(minutes=58)
+    # SIEMPRE: Inicio = fecha_base - 58 min (tanto si viene de Close como de Production)
+    if origen_fecha == "Close Start Date":
+        inicio_dt = fecha_base_dt - timedelta(minutes=58)
+    else:  # Production Start Date
+        inicio_dt = fecha_base_dt - timedelta(hours=1)
 
     # Fin = Inicio + 5 meses
     fin_dt = add_months(inicio_dt, 5)
@@ -83,8 +97,21 @@ for idx, row in df.iterrows():
         "Fin": fin_dt.strftime(formato_fecha),
     })
 
+
 out_df = pd.DataFrame(rows, columns=["storeId", "Inicio", "Fin"])
 out_df.to_csv(ruta_salida, sep=";", index=False, encoding="utf-8-sig")
 
 print(f"\nCSV generado correctamente en: {ruta_salida}")
 print(f"Total filas generadas: {len(out_df)}")
+
+# ------ Generar Excel (.xlsx) ------
+wb = Workbook()
+ws = wb.active
+
+ws.append(["storeId", "Inicio", "Fin", "Comparable"])
+
+for _, r in out_df.iterrows():
+    ws.append([r["storeId"], r["Inicio"], r["Fin"], ""])
+
+wb.save(ruta_excel)
+print(f"Excel generado correctamente en: {ruta_excel}")
