@@ -1,0 +1,759 @@
+[
+    {
+        "id": 1,
+        "code": "ZARA_FI",
+        "name": "FINLANDIA",
+        "colaboraId": "Zara FI",
+        "ecomloadId": "ZARA_FI"
+    },
+    {
+        "id": 2,
+        "code": "ZARA_SE",
+        "name": "SUECIA",
+        "colaboraId": "Zara SE",
+        "ecomloadId": "ZARA_SE"
+    },
+    {
+        "id": 3,
+        "code": "ZARA_CN",
+        "name": "MAINLAND CHINA - CN",
+        "colaboraId": "Zara CN",
+        "ecomloadId": "ZARA_CN",
+        "data": {
+            "min":10,
+            "presales": false
+        }
+    },
+    {
+        "id": 4,
+        "code": "ZARA_CN",
+        "name": "MAINLAND CHINA - WeChat MiniProgram",
+        "colaboraId": "",
+        "ecomloadId": ""
+        
+    },
+    {
+        "id": 5,
+        "code": "ZARA_CN",
+        "name": "MAINLAND CHINA - Douyin",
+        "colaboraId": "Zara XD",
+        "ecomloadId": "ZARA_XD",
+        "data": {
+            "min":10,
+             "presales": false
+        }
+    },
+    {
+        "id": 6,
+        "code": "ZARA_CN",
+        "name": "MAINLAND CHINA - Tmall",
+        "colaboraId": "Zara XT",
+        "ecomloadId": "ZARA_XT",
+        "data": {
+            "min":10,
+            "presales": false
+        }
+    },
+    {
+        "id": 7,
+        "code": "ZARA_SG",
+        "name": "SINGAPUR",
+        "colaboraId": "Zara SG",
+        "ecomloadId": "ZARA_SG"
+    },
+    {
+        "id": 8,
+        "code": "ZARA_HK",
+        "name": "HONG KONG SAR",
+        "colaboraId": "Zara HK",
+        "ecomloadId": "ZARA_HK"
+    },
+    {
+        "id": 9,
+        "code": "ZARA_MO",
+        "name": "MACAO SAR",
+        "colaboraId": "Zara MO",
+        "ecomloadId": "ZARA_MO"
+    },
+    {
+        "id": 10,
+        "code": "ZARA_TW",
+        "name": "TAIWAN, CHINA",
+        "colaboraId": "Zara TW",
+        "ecomloadId": "ZARA_TW"
+    },
+    {
+        "id": 11,
+        "code": "ZARA_TH",
+        "name": "THAILANDIA",
+        "colaboraId": "Zara TH",
+        "ecomloadId": "ZARA_TH"
+    },
+    {
+        "id": 12,
+        "code": "ZARA_KZ",
+        "name": "KAZAJISTAN",
+        "colaboraId": "Zara KZ",
+        "ecomloadId": "ZARA_KZ"
+    },
+    {
+        "id": 13,
+        "code": "ZARA_NL",
+        "name": "PAISES BAJOS",
+        "colaboraId": "Zara NL",
+        "ecomloadId": "ZARA_NL"
+    },
+    {
+        "id": 14,
+        "code": "ZARA_KW",
+        "name": "KUWAIT",
+        "colaboraId": "Zara KW",
+        "ecomloadId": "ZARA_KW"
+    },
+    {
+        "id": 15,
+        "code": "ZARA_AE",
+        "name": "EMIRATOS ARABES - DUBAI",
+        "colaboraId": "Zara AE",
+        "ecomloadId": "ZARA_AE"
+    },
+    {
+        "id": 16,
+        "code": "ZARA_OM",
+        "name": "OMAN (SULTANATO",
+        "colaboraId": "Zara OM",
+        "ecomloadId": "ZARA_OM"
+    },
+    {
+        "id": 17,
+        "code": "ZARA_CH",
+        "name": "SUIZA",
+        "colaboraId": "Zara CH",
+        "ecomloadId": "ZARA_CH"
+    },
+    {
+        "id": 18,
+        "code": "ZARA_BH",
+        "name": "BAHRAIN",
+        "colaboraId": "Zara BH",
+        "ecomloadId": "ZARA_BH"
+    },
+    {
+        "id": 19,
+        "code": "ZARA_JO",
+        "name": "JORDANIA",
+        "colaboraId": "Zara JO",
+        "ecomloadId": "ZARA_JO"
+    },
+    {
+        "id": 20,
+        "code": "ZARA_LB",
+        "name": "LIBANO",
+        "colaboraId": "Zara LB",
+        "ecomloadId": "ZARA_LB"
+    },
+    {
+        "id": 21,
+        "code": "ZARA_QA",
+        "name": "QATAR",
+        "colaboraId": "Zara QA",
+        "ecomloadId": "ZARA_QA"
+    },
+    {
+        "id": 22,
+        "code": "ZARA_FR",
+        "name": "FRANCIA",
+        "colaboraId": "Zara FR",
+        "ecomloadId": "ZARA_FR",
+        "data": {
+            "presales": false
+        }
+    },
+    {
+        "id": 23,
+        "code": "ZARA_MC",
+        "name": "MONACO",
+        "colaboraId": "Zara MC",
+        "ecomloadId": "ZARA_MC",
+        "data": {
+            "presales": false
+        }
+    },
+    {
+        "id": 24,
+        "code": "ZARA_NZ",
+        "name": "NUEVA ZELANDA",
+        "colaboraId": "Zara NZ",
+        "ecomloadId": "ZARA_NZ"
+    },
+    {
+        "id": 25,
+        "code": "ZARA_AU",
+        "name": "AUSTRALIA",
+        "colaboraId": "Zara AU",
+        "ecomloadId": "ZARA_AU"
+    },
+    {
+        "id": 26,
+        "code": "ZARA_KR",
+        "name": "COREA DEL SUR",
+        "colaboraId": "Zara KR",
+        "ecomloadId": "ZARA_KR"
+    },
+    {
+        "id": 27,
+        "code": "ZARA_JP",
+        "name": "JAPON",
+        "colaboraId": "Zara JP",
+        "ecomloadId": "ZARA_JP"
+    },
+    {
+        "id": 28,
+        "code": "ZARA_PH",
+        "name": "FILIPINAS",
+        "colaboraId": "Zara PH",
+        "ecomloadId": "ZARA_PH"
+    },
+    {
+        "id": 29,
+        "code": "ZARA_KH",
+        "name": "CAMBOYA",
+        "colaboraId": "Zara KH",
+        "ecomloadId": "ZARA_KH"
+    },
+    {
+        "id": 30,
+        "code": "ZARA_ID",
+        "name": "INDONESIA",
+        "colaboraId": "Zara ID",
+        "ecomloadId": "ZARA_ID"
+    },
+    {
+        "id": 31,
+        "code": "ZARA_VN",
+        "name": "VIETNAM",
+        "colaboraId": "Zara VN",
+        "ecomloadId": "ZARA_VN"
+    },
+    {
+        "id": 32,
+        "code": "ZARA_IN",
+        "name": "INDIA",
+        "colaboraId": "Zara IN",
+        "ecomloadId": "ZARA_IN"
+    },
+    {
+        "id": 33,
+        "code": "ZARA_UZ",
+        "name": "UZBEKISTAN",
+        "colaboraId": "Zara UZ",
+        "ecomloadId": "ZARA_UZ"
+    },
+    {
+        "id": 34,
+        "code": "ZARA_AM",
+        "name": "ARMENIA",
+        "colaboraId": "Zara AM",
+        "ecomloadId": "ZARA_AM"
+    },
+    {
+        "id": 35,
+        "code": "ZARA_AZ",
+        "name": "AZERBAIYAN",
+        "colaboraId": "Zara AZ",
+        "ecomloadId": "ZARA_AZ"
+    },
+    {
+        "id": 36,
+        "code": "ZARA_BG",
+        "name": "BULGARIA",
+        "colaboraId": "Zara BG",
+        "ecomloadId": "ZARA_BG"
+    },
+    {
+        "id": 37,
+        "code": "ZARA_DK",
+        "name": "DINAMARCA",
+        "colaboraId": "Zara DK",
+        "ecomloadId": "ZARA_DK"
+    },
+    {
+        "id": 38,
+        "code": "ZARA_GE",
+        "name": "GEORGIA",
+        "colaboraId": "Zara GE",
+        "ecomloadId": "ZARA_GE"
+    },
+    {
+        "id": 39,
+        "code": "ZARA_NO",
+        "name": "NORUEGA",
+        "colaboraId": "Zara NO",
+        "ecomloadId": "ZARA_NO"
+    },
+    {
+        "id": 40,
+        "code": "ZARA_TR",
+        "name": "TURQUIA",
+        "colaboraId": "Zara TR",
+        "ecomloadId": "ZARA_TR"
+    },
+    {
+        "id": 41,
+        "code": "ZARA_RS",
+        "name": "SERBIA",
+        "colaboraId": "Zara RS",
+        "ecomloadId": "ZARA_RS"
+    },
+    {
+        "id": 42,
+        "code": "ZARA_DE",
+        "name": "ALEMANIA",
+        "colaboraId": "Zara DE",
+        "ecomloadId": "ZARA_DE"
+    },
+    {
+        "id": 43,
+        "code": "ZARA_SA",
+        "name": "ARABIA SAUDI",
+        "colaboraId": "Zara SA",
+        "ecomloadId": "ZARA_SA"
+    },
+    {
+        "id": 44,
+        "code": "ZARA_AT",
+        "name": "AUSTRIA",
+        "colaboraId": "Zara AT",
+        "ecomloadId": "ZARA_AT"
+    },
+    {
+        "id": 45,
+        "code": "ZARA_BA",
+        "name": "BOSNIA-HERZEGOV",
+        "colaboraId": "Zara BA",
+        "ecomloadId": "ZARA_BA"
+    },
+    {
+        "id": 46,
+        "code": "ZARA_CY",
+        "name": "CHIPRE",
+        "colaboraId": "Zara CY",
+        "ecomloadId": "ZARA_CY"
+    },
+    {
+        "id": 47,
+        "code": "ZARA_SK",
+        "name": "ESLOVAQUIA",
+        "colaboraId": "Zara SK",
+        "ecomloadId": "ZARA_SK"
+    },
+    {
+        "id": 48,
+        "code": "ZARA_SI",
+        "name": "ESLOVENIA",
+        "colaboraId": "Zara SI",
+        "ecomloadId": "ZARA_SI"
+    },
+    {
+        "id": 49,
+        "code": "ZARA_EE",
+        "name": "ESTONIA",
+        "colaboraId": "Zara EE",
+        "ecomloadId": "ZARA_EE"
+    },
+    {
+        "id": 50,
+        "code": "ZARA_GR",
+        "name": "GRECIA",
+        "colaboraId": "Zara GR",
+        "ecomloadId": "ZARA_GR"
+    },
+    {
+        "id": 51,
+        "code": "ZARA_HU",
+        "name": "HUNGRIA",
+        "colaboraId": "Zara HU",
+        "ecomloadId": "ZARA_HU"
+    },
+    {
+        "id": 52,
+        "code": "ZARA_LV",
+        "name": "LETONIA",
+        "colaboraId": "Zara LV",
+        "ecomloadId": "ZARA_LV"
+    },
+    {
+        "id": 53,
+        "code": "ZARA_LT",
+        "name": "LITUANIA",
+        "colaboraId": "Zara LT",
+        "ecomloadId": "ZARA_LT"
+    },
+    {
+        "id": 54,
+        "code": "ZARA_PL",
+        "name": "POLONIA",
+        "colaboraId": "Zara PL",
+        "ecomloadId": "ZARA_PL",
+        "data": {
+            "presales": false
+        }
+    },
+    {
+        "id": 55,
+        "code": "ZARA_CZ",
+        "name": "REP.CHECA",
+        "colaboraId": "Zara CZ",
+        "ecomloadId": "ZARA_CZ"
+    },
+    {
+        "id": 56,
+        "code": "ZARA_RO",
+        "name": "RUMANIA",
+        "colaboraId": "Zara RO",
+        "ecomloadId": "ZARA_RO"
+    },
+    {
+        "id": 57,
+        "code": "ZARA_UA",
+        "name": "UCRANIA",
+        "colaboraId": "Zara UA",
+        "ecomloadId": "ZARA_UA"
+    },
+    {
+        "id": 58,
+        "code": "ZARA_WW",
+        "name": ".COM INTERNACIO",
+        "colaboraId": "Zara WW",
+        "ecomloadId": "ZARA_WW"
+    },
+    {
+        "id": 59,
+        "code": "ZARA_AL",
+        "name": "ALBANIA",
+        "colaboraId": "Zara AL",
+        "ecomloadId": "ZARA_AL"
+    },
+    {
+        "id": 60,
+        "code": "ZARA_AD",
+        "name": "ANDORRA",
+        "colaboraId": "Zara AD",
+        "ecomloadId": "ZARA_AD"
+    },
+    {
+        "id": 61,
+        "code": "ZARA_IC",
+        "name": "CANARIAS",
+        "colaboraId": "Zara IC",
+        "ecomloadId": "ZARA_IC"
+    },
+    {
+        "id": 62,
+        "code": "ZARA_ES",
+        "name": "ESPAÑA",
+        "colaboraId": "Zara ES",
+        "ecomloadId": "ZARA_ES"
+    },
+    {
+        "id": 63,
+        "code": "ZARA_IE",
+        "name": "IRLANDA",
+        "colaboraId": "Zara IE",
+        "ecomloadId": "ZARA_IE"
+    },
+    {
+        "id": 64,
+        "code": "ZARA_XK",
+        "name": "KOSOVO",
+        "colaboraId": "Zara XK",
+        "ecomloadId": "ZARA_XK"
+    },
+    {
+        "id": 65,
+        "code": "ZARA_MK",
+        "name": "MACEDONIA",
+        "colaboraId": "Zara MK",
+        "ecomloadId": "ZARA_MK"
+    },
+    {
+        "id": 66,
+        "code": "ZARA_MT",
+        "name": "MALTA",
+        "colaboraId": "Zara MT",
+        "ecomloadId": "ZARA_MT"
+    },
+    {
+        "id": 67,
+        "code": "ZARA_ME",
+        "name": "MONTENEGRO",
+        "colaboraId": "Zara ME",
+        "ecomloadId": "ZARA_ME"
+    },
+    {
+        "id": 68,
+        "code": "ZARA_AO",
+        "name": "ANGOLA",
+        "colaboraId": "Zara AO",
+        "ecomloadId": "ZARA_AO"
+    },
+    {
+        "id": 69,
+        "code": "ZARA_EG",
+        "name": "EGIPTO",
+        "colaboraId": "Zara EG",
+        "ecomloadId": "ZARA_EG"
+    },
+    {
+        "id": 70,
+        "code": "ZARA_GB",
+        "name": "GRAN BRETAÑA",
+        "colaboraId": "Zara GB",
+        "ecomloadId": "ZARA_UK"
+    },
+    {
+        "id": 71,
+        "code": "ZARA_IS",
+        "name": "ISLANDIA",
+        "colaboraId": "Zara IS",
+        "ecomloadId": "ZARA_IS"
+    },
+    {
+        "id": 72,
+        "code": "ZARA_PT",
+        "name": "PORTUGAL",
+        "colaboraId": "Zara PT",
+        "ecomloadId": "ZARA_PT"
+    },
+    {
+        "id": 73,
+        "code": "ZARA_CL",
+        "name": "CHILE",
+        "colaboraId": "Zara CL",
+        "ecomloadId": "ZARA_CL"
+    },
+    {
+        "id": 74,
+        "code": "ZARA_PY",
+        "name": "PARAGUAY",
+        "colaboraId": "Zara PY",
+        "ecomloadId": "ZARA_PY"
+    },
+    {
+        "id": 75,
+        "code": "ZARA_AR",
+        "name": "ARGENTINA",
+        "colaboraId": "Zara AR",
+        "ecomloadId": "ZARA_AR"
+    },
+    {
+        "id": 76,
+        "code": "ZARA_BR",
+        "name": "BRASIL",
+        "colaboraId": "Zara BR",
+        "ecomloadId": "ZARA_BR"
+    },
+    {
+        "id": 77,
+        "code": "ZARA_UY",
+        "name": "URUGUAY",
+        "colaboraId": "Zara UY",
+        "ecomloadId": "ZARA_UY"
+    },
+    {
+        "id": 78,
+        "code": "ZARA_AW",
+        "name": "ARUBA",
+        "colaboraId": "Zara AW",
+        "ecomloadId": "ZARA_AW"
+    },
+    {
+        "id": 79,
+        "code": "ZARA_CA",
+        "name": "CANADA",
+        "colaboraId": "Zara CA",
+        "ecomloadId": "ZARA_CA"
+    },
+    {
+        "id": 80,
+        "code": "ZARA_PR",
+        "name": "PUERTO RICO",
+        "colaboraId": "Zara PR",
+        "ecomloadId": "ZARA_PR"
+    },
+    {
+        "id": 81,
+        "code": "ZARA_DO",
+        "name": "REP.DOMINICANA",
+        "colaboraId": "Zara DO",
+        "ecomloadId": "ZARA_DO"
+    },
+    {
+        "id": 82,
+        "code": "ZARA_US",
+        "name": "U.S.A.",
+        "colaboraId": "Zara US",
+        "ecomloadId": "ZARA_US"
+    },
+    {
+        "id": 83,
+        "code": "ZARA_VE",
+        "name": "VENEZUELA",
+        "colaboraId": "Zara VE",
+        "ecomloadId": "ZARA_VE"
+    },
+    {
+        "id": 84,
+        "code": "ZARA_CO",
+        "name": "COLOMBIA",
+        "colaboraId": "Zara CO",
+        "ecomloadId": "ZARA_CO"
+    },
+    {
+        "id": 85,
+        "code": "ZARA_EC",
+        "name": "ECUADOR",
+        "colaboraId": "Zara EC",
+        "ecomloadId": "ZARA_EC"
+    },
+    {
+        "id": 86,
+        "code": "ZARA_PA",
+        "name": "PANAMA",
+        "colaboraId": "Zara PA",
+        "ecomloadId": "ZARA_PA"
+    },
+    {
+        "id": 87,
+        "code": "ZARA_PE",
+        "name": "PERU",
+        "colaboraId": "Zara PE",
+        "ecomloadId": "ZARA_PE"
+    },
+    {
+        "id": 88,
+        "code": "ZARA_CR",
+        "name": "COSTA RICA",
+        "colaboraId": "Zara CR",
+        "ecomloadId": "ZARA_CR"
+    },
+    {
+        "id": 89,
+        "code": "ZARA_SV",
+        "name": "EL SALVADOR",
+        "colaboraId": "Zara SV",
+        "ecomloadId": "ZARA_SV"
+    },
+    {
+        "id": 90,
+        "code": "ZARA_GT",
+        "name": "GUATEMALA",
+        "colaboraId": "Zara GT",
+        "ecomloadId": "ZARA_GT"
+    },
+    {
+        "id": 91,
+        "code": "ZARA_HN",
+        "name": "HONDURAS",
+        "colaboraId": "Zara HN",
+        "ecomloadId": "ZARA_HN"
+    },
+    {
+        "id": 92,
+        "code": "ZARA_MX",
+        "name": "MEXICO",
+        "colaboraId": "Zara MX",
+        "ecomloadId": "ZARA_MX"
+    },
+    {
+        "id": 93,
+        "code": "ZARA_NI",
+        "name": "NICARAGUA",
+        "colaboraId": "Zara NI",
+        "ecomloadId": "ZARA_NI"
+    },
+    {
+        "id": 94,
+        "code": "ZARA_ZA",
+        "name": "SUDAFRICA",
+        "colaboraId": "Zara ZA",
+        "ecomloadId": "ZARA_ZA"
+    },
+    {
+        "id": 95,
+        "code": "ZARA_LU",
+        "name": "LUXEMBURGO",
+        "colaboraId": "Zara LU",
+        "ecomloadId": "ZARA_LU"
+    },
+    {
+        "id": 96,
+        "code": "ZARA_HR",
+        "name": "CROACIA",
+        "colaboraId": "Zara HR",
+        "ecomloadId": "ZARA_HR"
+    },
+    {
+        "id": 97,
+        "code": "ZARA_BE",
+        "name": "BELGICA",
+        "colaboraId": "Zara BE",
+        "ecomloadId": "ZARA_BE"
+    },
+    {
+        "id": 98,
+        "code": "ZARA_IL",
+        "name": "ISRAEL",
+        "colaboraId": "Zara IL",
+        "ecomloadId": "ZARA_IL"
+    },
+    {
+        "id": 99,
+        "code": "ZARA_MA",
+        "name": "MARRUECOS",
+        "colaboraId": "Zara MA",
+        "ecomloadId": "ZARA_MA"
+    },
+    {
+        "id": 100,
+        "code": "ZARA_IT",
+        "name": "ITALIA",
+        "colaboraId": "Zara IT",
+        "ecomloadId": "ZARA_IT"
+    },
+    {
+        "id": 101,
+        "code": "ZARA_TN",
+        "name": "TUNEZ",
+        "colaboraId": "Zara TN",
+        "ecomloadId": "ZARA_TN"
+    },
+    {
+        "id": 102,
+        "code": "ZARA_73",
+        "name": "BIELORRUSIA",
+        "colaboraId": "",
+        "ecomloadId": ""
+    },
+    {
+        "id": 103,
+        "code": "ZARA_DZ",
+        "name": "ARGELIA",
+        "colaboraId": "Zara DZ",
+        "ecomloadId": "ZARA_DZ"
+    },
+    {
+        "id": 104,
+        "code": "ZARA_XE",
+        "name": "EMIRATOS ARABES - ABU DHABI",
+        "colaboraId": "Zara XE",
+        "ecomloadId": "ZARA_XE"
+    },
+    {
+        "id": 105,
+        "code": "ZARA_MY",
+        "name": "MALASIA",
+        "colaboraId": "Zara MY",
+        "ecomloadId": "ZARA_MY"
+    }
+]
