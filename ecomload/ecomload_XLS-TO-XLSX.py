@@ -5,34 +5,31 @@ from calendar import monthrange
 from openpyxl import Workbook
 
 # ---------- CONFIGURACIÓN ----------
-ruta_xlsx = "ecomload/colabora.xlsx"
+ruta_xls = "ecomload/colabora.xls"
 ruta_json = "ecomload/id_mapping.json"
-salida_csv = "ecomload/output_ecomload.csv"
 salida_excel = "ecomload/output_ecomload.xlsx"
+salida_csv = "ecomload/output_ecomload.csv"
 
 formato_fecha = "%d/%m/%Y %H:%M"
 # -----------------------------------
 
-print("Leyendo XLS/XLSX de eventos desde:", ruta_xlsx)
+print("Leyendo archivo XLS desde:", ruta_xls)
 
-df = pd.read_excel(
-    ruta_xlsx,
-    dtype=str
-)
+df = pd.read_excel(ruta_xls, dtype=str)
 
 # 1) Cargar JSON de mapeo colaboraId -> ecomloadId
 print(f"\nLeyendo JSON de mapeo desde: {ruta_json}")
 with open(ruta_json, "r", encoding="utf-8") as f:
     data = json.load(f)
 
-map_colabora_to_ecom = {}
-for item in data:
-    colab = item.get("colaboraId")
-    ecom = item.get("ecomloadId")
-    if colab and ecom:
-        map_colabora_to_ecom[colab] = ecom
+map_colabora_to_ecom = {
+    item.get("colaboraId"): item.get("ecomloadId")
+    for item in data
+    if item.get("colaboraId") and item.get("ecomloadId")
+}
 
-print(f"Total mapeos colaboraId -> ecomloadId cargados: {len(map_colabora_to_ecom)}")
+print(f"Total mapeos cargados: {len(map_colabora_to_ecom)}")
+
 
 def add_months(dt, months):
     month = dt.month - 1 + months
@@ -40,6 +37,7 @@ def add_months(dt, months):
     month = month % 12 + 1
     day = min(dt.day, monthrange(year, month)[1])
     return dt.replace(year=year, month=month, day=day)
+
 
 rows = []
 
@@ -54,37 +52,38 @@ for idx, row in df.iterrows():
 
     ecom_id = map_colabora_to_ecom.get(colab)
     if not ecom_id:
-        print(f"Fila {idx}: ⚠️ no encontré mapeo en el JSON para colaboraId = '{colab}', se omite.")
+        print(f"Fila {idx}: ⚠️ no hay mapeo para '{colab}', se omite.")
         continue
 
-    # Intentar primero Close Start Date, si no, Production Start Date
-    close_start_raw = row.get("Close Start Date")
-    prod_start_raw = row.get("Production Start Date")
+    # Intentar Close Start Date, luego Production Start Date
+    close_raw = row.get("Close Start Date")
+    prod_raw = row.get("Production Start Date")
 
-    fecha_base_raw = None
+    fecha_raw = None
     origen_fecha = None
 
-    if isinstance(close_start_raw, str) and close_start_raw.strip():
-        fecha_base_raw = close_start_raw.strip()
+    if isinstance(close_raw, str) and close_raw.strip():
+        fecha_raw = close_raw.strip()
         origen_fecha = "Close Start Date"
-    elif isinstance(prod_start_raw, str) and prod_start_raw.strip():
-        fecha_base_raw = prod_start_raw.strip()
+    elif isinstance(prod_raw, str) and prod_raw.strip():
+        fecha_raw = prod_raw.strip()
         origen_fecha = "Production Start Date"
     else:
-        print(f"Fila {idx}: sin Close Start Date ni Production Start Date para '{colab}', se omite.")
+        print(f"Fila {idx}: sin fecha válida para '{colab}', se omite.")
         continue
 
+    # Parseo fecha
     try:
-        fecha_base_dt = datetime.strptime(fecha_base_raw, formato_fecha)
+        fecha_base = datetime.strptime(fecha_raw, formato_fecha)
     except ValueError:
-        print(f"Fila {idx}: ⚠️ formato de fecha no válido '{fecha_base_raw}' en {origen_fecha} para '{colab}', se omite.")
+        print(f"Fila {idx}: ⚠️ fecha inválida '{fecha_raw}' para '{colab}', se omite.")
         continue
 
-    # SIEMPRE: Inicio = fecha_base - 58 min
+    # Inicio
     if origen_fecha == "Close Start Date":
-        inicio_dt = fecha_base_dt - timedelta(minutes=58)
+        inicio_dt = fecha_base - timedelta(minutes=58)
     else:
-        inicio_dt = fecha_base_dt - timedelta(hours=1)
+        inicio_dt = fecha_base - timedelta(hours=1)
 
     # Fin = Inicio + 5 meses
     fin_dt = add_months(inicio_dt, 5)
@@ -95,14 +94,14 @@ for idx, row in df.iterrows():
         "Fin": fin_dt.strftime(formato_fecha),
     })
 
-# ------ Generar CSV final ------
+# ------ Generar CSV ------
 out_df = pd.DataFrame(rows, columns=["storeId", "Inicio", "Fin"])
 out_df.to_csv(salida_csv, sep=";", index=False, encoding="utf-8-sig")
 
 print(f"\nCSV generado correctamente en: {salida_csv}")
 print(f"Total filas generadas: {len(out_df)}")
 
-# ------ Generar Excel (.xlsx) ------
+# ------ Generar XLSX ------
 wb = Workbook()
 ws = wb.active
 
@@ -112,4 +111,4 @@ for _, r in out_df.iterrows():
     ws.append([r["storeId"], r["Inicio"], r["Fin"], ""])
 
 wb.save(salida_excel)
-print(f"Excel generado correctamente en: {salida_excel}")
+print(f"Excel XLSX generado correctamente en: {salida_excel}")
